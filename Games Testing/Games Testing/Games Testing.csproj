@@ -52,7 +52,6 @@
     <Compile Include="clsProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstProduct.cs" />
-    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
