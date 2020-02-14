@@ -6,5 +6,6 @@ namespace GamesClasses
     {
         public bool Active { get; set; }
         public DateTime dateAdded { get; set; }
+        public int orderNum { get; set; }
     }
 }
