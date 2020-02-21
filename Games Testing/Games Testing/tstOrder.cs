@@ -7,21 +7,6 @@ namespace Games_Testing
     [TestClass]
     public class tstOrder
     {
-      /*  //test data
-        //data to pass to methods
-        bool isActive = true;
-        int orderNumber = 1;
-        string orderDate = DateTime.Now.Date.ToString();
-        float orderTotal = 52.95f;
-        string orderCustomerFirstName = "George";
-        string orderCustomerLastName = "Kozis";
-        string orderCustomerAddress = "Western Road 42D";
-        string orderCustomerPostcode = "LE3 1GH";
-        string orderCustomerCity = "Leicester";
-        string orderCustomerPhoneNumber = "+4407802680483";
-    */
-
-
         [TestMethod]
         public void OrderInstanceOK()
         {
@@ -40,35 +25,155 @@ namespace Games_Testing
             anOrder.Active = testData;
             //test to see that the two values are the same;
             Assert.AreEqual(anOrder.Active, testData);
-            
-            
         }
 
         [TestMethod]
-        public void orderDateOK()
+        public void OrderDateOK()
         {
-            //create an instance of the class we want to create
             clsOrder anOrder = new clsOrder();
-            //create some test data to assign to this property
             DateTime TestData = DateTime.Now.Date;
-            //assign the data to the property
-            anOrder.dateAdded = TestData;
-            //test to see that the two values are the same
-            Assert.AreEqual(anOrder.dateAdded, TestData);
+            anOrder.DateAdded = TestData;
+            Assert.AreEqual(anOrder.DateAdded, TestData);
         }
 
         [TestMethod]
-        public void orderNumberOK()
+        public void OrderNumberOK()
         {
             clsOrder anOrder = new clsOrder();
             int TestData = 1;
-            anOrder.orderNum = TestData;
-            Assert.AreEqual(anOrder.orderNum, TestData);
+            anOrder.OrderNo= TestData;
+            Assert.AreEqual(anOrder.OrderNo, TestData);
         }
 
-      
 
+        [TestMethod]
+        public void OrderTotalOK()
+        {
+            clsOrder anOrder = new clsOrder();
+            decimal TestData = 12.50M;
+            anOrder.OrderTotal = TestData;
+            Assert.AreEqual(anOrder.OrderTotal, TestData);
+        }
 
+        [TestMethod]
+        public void OrderFirstNameOK()
+        {
+            clsOrder anOrder = new clsOrder();
+            String TestData = "George";
+            anOrder.OrderFirstName = TestData;
+            Assert.AreEqual(anOrder.OrderFirstName, TestData);
+        }
+
+        [TestMethod]
+        public void OrderLastNameOK()
+        {
+            clsOrder anOrder = new clsOrder();
+            String TestData = "Kozis";
+            anOrder.OrderLastName = TestData;
+            Assert.AreEqual(anOrder.OrderLastName, TestData);
+        }
+
+        [TestMethod]
+        public void OrderAddressOK()
+        {
+            clsOrder anOrder = new clsOrder();
+            String TestData = "42D Western Road";
+            anOrder.OrderAddress = TestData;
+            Assert.AreEqual(anOrder.OrderAddress, TestData);
+        }
+
+        [TestMethod]
+        public void OrderPostcodeOK()
+        {
+            clsOrder anOrder = new clsOrder();
+            String TestData = "LE3 OBK";
+            anOrder.OrderPostcode = TestData;
+            Assert.AreEqual(anOrder.OrderPostcode, TestData);
+        }
+
+        [TestMethod]
+        public void OrderCityOK()
+        {
+            clsOrder anOrder = new clsOrder();
+            String TestData = "Leicester";
+            anOrder.OrderCity = TestData;
+            Assert.AreEqual(anOrder.OrderCity, TestData);
+        }
+
+        [TestMethod]
+        public void OrderPhoneNumber()
+        {
+            clsOrder anOrder = new clsOrder();
+            String TestData = "+44 457302049";
+            anOrder.OrderPhoneNumber= TestData;
+            Assert.AreEqual(anOrder.OrderPhoneNumber, TestData);
+        }
+
+        [TestMethod]
+        public void OrderEmail()
+        {
+            clsOrder anOrder = new clsOrder();
+            String TestData = "kozis-98@hotmail.com";
+            anOrder.OrderEmail = TestData;
+            Assert.AreEqual(anOrder.OrderEmail, TestData);
+        }
+
+        [TestMethod]
+        public void FindOrderOK()
+        {
+            clsOrder anOrder = new clsOrder();
+            Boolean Found = false;
+            Int32 orderNo = 1;
+            Found = anOrder.Find(orderNo);
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestOrderNoFound()
+        {
+            clsOrder anOrder = new clsOrder();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 orderNo = 21;
+            Found = anOrder.Find(orderNo);
+            if (anOrder.OrderNo != 21)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestDateAddedFound()
+        {
+            clsOrder anOrder = new clsOrder();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 orderNo = 21;
+            Found = anOrder.Find(orderNo);
+            if(anOrder.DateAdded != Convert.ToDateTime("16/09/2015"))
+            {
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestOrderTotalFound()
+        {
+            clsOrder anOrder = new clsOrder();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 orderNo = 21;
+            Found = anOrder.Find(orderNo);
+            if (anOrder.OrderTotal != Convert.ToDecimal(12.5M))
+            {
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
 
 
     }
