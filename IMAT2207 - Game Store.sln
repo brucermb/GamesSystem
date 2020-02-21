@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29728.190
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesBackOffice", "GamesBackOffice\GamesBackOffice\GamesBackOffice.csproj", "{BAF37E59-616A-4310-B5FE-1DB9CF9EAFC8}"
 EndProject
@@ -30,6 +30,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesClasses", "GamesClasses\GamesClasses\GamesClasses.csproj", "{DE032670-2834-45CB-8631-1633007BB889}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesTesting", "Games Testing\Games Testing\GamesTesting.csproj", "{FB01512D-D819-4F07-8B77-B1F4D22B26CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0FEE1DDD-90B0-4A23-9BFD-86E0DC710682}"
+	ProjectSection(SolutionItems) = preProject
+		Games Testing\Games Testing\tstStaff.cs = Games Testing\Games Testing\tstStaff.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
