@@ -31,6 +31,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesClasses", "GamesClasse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesTesting", "Games Testing\Games Testing\GamesTesting.csproj", "{FB01512D-D819-4F07-8B77-B1F4D22B26CB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0FEE1DDD-90B0-4A23-9BFD-86E0DC710682}"
+	ProjectSection(SolutionItems) = preProject
+		Games Testing\Games Testing\tstStaff.cs = Games Testing\Games Testing\tstStaff.cs
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{04FBBA46-2AF2-4ED7-933E-066154EA0EE0}"
 	ProjectSection(SolutionItems) = preProject
 		Games Testing\Games Testing\tstProduct.cs = Games Testing\Games Testing\tstProduct.cs
