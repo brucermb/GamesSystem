@@ -4,6 +4,7 @@ namespace GamesClasses
 {
     public class clsOrder
     {
+        private Boolean mOrderActive;
         private Int32 mOrderNo;
         private DateTime mDateAdded;
         private decimal mOrderTotal;
@@ -15,7 +16,17 @@ namespace GamesClasses
         private String mOrderPhoneNumber;
         private String mOrderEmail;
 
-        public bool Active { get; set; }
+        public Boolean OrderActive
+        {
+            get
+            {
+                return mOrderActive;
+            }
+            set
+            {
+                mOrderActive = value;
+            }
+        }
         public DateTime DateAdded 
         {   get
             {
@@ -47,7 +58,6 @@ namespace GamesClasses
                 mOrderTotal = value;
             }
         }
-
         public string OrderFirstName 
         { get
             {
@@ -127,17 +137,35 @@ namespace GamesClasses
 
         public bool Find(int orderNo)
         {
-            mOrderFirstName = "George";
-            mOrderLastName = "Kozis";
-            mOrderAddress = "42D Western Road";
-            mOrderPostcode = "LE3 OBK";
-            mOrderCity = "Leicester";
-            mOrderPhoneNumber = "+44 457302049";
-            mOrderEmail = "kozis-98@hotmail.com";
-            mOrderTotal = Convert.ToDecimal(12.50M);
-            mDateAdded = Convert.ToDateTime("16/09/2015");
-            mOrderNo = 21;
-            return true;
+            //create an instance of the data connection 
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the Order No to search for
+            DB.AddParameter("@OrderNo", OrderNo);
+            //execute the stored procedure 
+            DB.Execute("sproc_tblOrder_FilterByOrderNo");
+
+            //If one record is found (there should be either one or zero)
+            if (DB.Count == 1)
+            {
+                mOrderFirstName = "George";
+                mOrderLastName = "Kozis";
+                mOrderAddress = "42D Western Road";
+                mOrderPostcode = "LE3 OBK";
+                mOrderCity = "Leicester";
+                mOrderPhoneNumber = "+44 457302049";
+                mOrderEmail = "kozis-98@hotmail.com";
+                mOrderTotal = Convert.ToDecimal(12.50M);
+                mDateAdded = Convert.ToDateTime("16/09/2015");
+                mOrderNo = 21;
+                //return that everything worked OK
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
         }
     }
 }
