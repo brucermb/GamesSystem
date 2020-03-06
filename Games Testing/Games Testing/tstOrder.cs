@@ -22,9 +22,9 @@ namespace Games_Testing
             //create some test data to assign to the property
             Boolean testData = true;
             //assign the data to the property
-            anOrder.Active = testData;
+            anOrder.OrderActive = testData;
             //test to see that the two values are the same;
-            Assert.AreEqual(anOrder.Active, testData);
+            Assert.AreEqual(anOrder.OrderActive, testData);
         }
 
         [TestMethod]
@@ -32,8 +32,8 @@ namespace Games_Testing
         {
             clsOrder anOrder = new clsOrder();
             DateTime TestData = DateTime.Now.Date;
-            anOrder.DateAdded = TestData;
-            Assert.AreEqual(anOrder.DateAdded, TestData);
+            anOrder.OrderDateAdded = TestData;
+            Assert.AreEqual(anOrder.OrderDateAdded, TestData);
         }
 
         [TestMethod]
@@ -123,8 +123,8 @@ namespace Games_Testing
         {
             clsOrder anOrder = new clsOrder();
             Boolean Found = false;
-            Int32 orderNo = 1;
-            Found = anOrder.Find(orderNo);
+            Int32 OrderNo = 1;
+            Found = anOrder.Find(OrderNo);
             Assert.IsTrue(Found);
         }
 
@@ -134,8 +134,8 @@ namespace Games_Testing
             clsOrder anOrder = new clsOrder();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 orderNo = 21;
-            Found = anOrder.Find(orderNo);
+            Int32 OrderNo = 21;
+            Found = anOrder.Find(OrderNo);
             if (anOrder.OrderNo != 21)
             {
                 OK = false;
@@ -149,9 +149,9 @@ namespace Games_Testing
             clsOrder anOrder = new clsOrder();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 orderNo = 21;
-            Found = anOrder.Find(orderNo);
-            if(anOrder.DateAdded != Convert.ToDateTime("16/09/2015"))
+            Int32 OrderNo = 21;
+            Found = anOrder.Find(OrderNo);
+            if(anOrder.OrderDateAdded != Convert.ToDateTime("16/09/2015"))
             {
                 OK = false;
             }
@@ -165,8 +165,8 @@ namespace Games_Testing
             clsOrder anOrder = new clsOrder();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 orderNo = 21;
-            Found = anOrder.Find(orderNo);
+            Int32 OrderNo = 21;
+            Found = anOrder.Find(OrderNo);
             if (anOrder.OrderTotal != Convert.ToDecimal(12.5M))
             {
                 OK = false;

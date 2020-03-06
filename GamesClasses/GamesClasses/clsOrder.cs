@@ -6,8 +6,8 @@ namespace GamesClasses
     {
         private Boolean mOrderActive;
         private Int32 mOrderNo;
-        private DateTime mDateAdded;
-        private decimal mOrderTotal;
+        private DateTime mOrderDateAdded;
+        private Decimal mOrderTotal;
         private String mOrderFirstName;
         private String mOrderLastName;
         private String mOrderAddress;
@@ -27,14 +27,14 @@ namespace GamesClasses
                 mOrderActive = value;
             }
         }
-        public DateTime DateAdded 
+        public DateTime OrderDateAdded 
         {   get
             {
-                return mDateAdded;
+                return mOrderDateAdded;
             }
             set
             {
-                mDateAdded = value;
+                mOrderDateAdded = value;
             }
         }
         public int OrderNo 
@@ -147,16 +147,17 @@ namespace GamesClasses
             //If one record is found (there should be either one or zero)
             if (DB.Count == 1)
             {
-                mOrderFirstName = "George";
-                mOrderLastName = "Kozis";
-                mOrderAddress = "42D Western Road";
-                mOrderPostcode = "LE3 OBK";
-                mOrderCity = "Leicester";
-                mOrderPhoneNumber = "+44 457302049";
-                mOrderEmail = "kozis-98@hotmail.com";
-                mOrderTotal = Convert.ToDecimal(12.50M);
-                mDateAdded = Convert.ToDateTime("16/09/2015");
-                mOrderNo = 21;
+                mOrderActive = Convert.ToBoolean(DB.DataTable.Rows[0]["OrderActive"]);
+                mOrderFirstName = Convert.ToString(DB.DataTable.Rows[0]["OrderFirstName"]);
+                mOrderLastName = Convert.ToString(DB.DataTable.Rows[0]["OrderLastName"]);
+                mOrderAddress = Convert.ToString(DB.DataTable.Rows[0]["OrderAddress"]);
+                mOrderPostcode = Convert.ToString(DB.DataTable.Rows[0]["OrderPostcode"]);
+                mOrderCity = Convert.ToString(DB.DataTable.Rows[0]["OrderCity"]);
+                mOrderPhoneNumber = Convert.ToString(DB.DataTable.Rows[0]["OrderPhoneNumber"]);
+                mOrderEmail = Convert.ToString(DB.DataTable.Rows[0]["OrderEmail"]);
+                mOrderTotal = Convert.ToDecimal(DB.DataTable.Rows[0]["OrderTotal"]);
+                mOrderDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["OrderDateAdded"]);
+                mOrderNo = Convert.ToInt32(DB.DataTable.Rows[0]["OrderNo"]);
                 //return that everything worked OK
                 return true;
             }
