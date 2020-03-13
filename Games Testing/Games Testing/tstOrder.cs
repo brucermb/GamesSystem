@@ -123,7 +123,7 @@ namespace Games_Testing
         {
             clsOrder anOrder = new clsOrder();
             Boolean Found = false;
-            Int32 OrderNo = 1;
+            Int32 OrderNo = 2;
             Found = anOrder.Find(OrderNo);
             Assert.IsTrue(Found);
         }
@@ -134,9 +134,9 @@ namespace Games_Testing
             clsOrder anOrder = new clsOrder();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 2;
             Found = anOrder.Find(OrderNo);
-            if (anOrder.OrderNo != 21)
+            if (anOrder.OrderNo != 2)
             {
                 OK = false;
             }
@@ -149,7 +149,7 @@ namespace Games_Testing
             clsOrder anOrder = new clsOrder();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 2;
             Found = anOrder.Find(OrderNo);
             if(anOrder.OrderDateAdded != Convert.ToDateTime("16/09/2015"))
             {
@@ -165,9 +165,9 @@ namespace Games_Testing
             clsOrder anOrder = new clsOrder();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 OrderNo = 21;
+            Int32 OrderNo = 2;
             Found = anOrder.Find(OrderNo);
-            if (anOrder.OrderTotal != Convert.ToDecimal(12.5M))
+            if (anOrder.OrderTotal != Convert.ToDecimal(20M))
             {
                 OK = false;
             }
