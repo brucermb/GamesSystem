@@ -135,7 +135,7 @@ namespace GamesClasses
             }
         }
 
-        public bool Find(int orderNo)
+        public bool Find(int OrderNo)
         {
             //create an instance of the data connection 
             clsDataConnection DB = new clsDataConnection();
