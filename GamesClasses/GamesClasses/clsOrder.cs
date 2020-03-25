@@ -168,5 +168,18 @@ namespace GamesClasses
                 return false;
             }
         }
+
+        public void Delete(Int32 OrderNo)
+        {
+            //create an instance of the data connection 
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the Order No to search for
+            DB.AddParameter("@OrderNo", OrderNo);
+            //execute the stored procedure 
+            DB.Execute("sproc_tblOrder_Delete");
+        }
+
+
+
     }
 }
