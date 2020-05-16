@@ -41,7 +41,7 @@ namespace Games_Testing
         {
             clsOrder anOrder = new clsOrder();
             int TestData = 1;
-            anOrder.OrderNo= TestData;
+            anOrder.OrderNo = TestData;
             Assert.AreEqual(anOrder.OrderNo, TestData);
         }
 
@@ -105,7 +105,7 @@ namespace Games_Testing
         {
             clsOrder anOrder = new clsOrder();
             String TestData = "+44 457302049";
-            anOrder.OrderPhoneNumber= TestData;
+            anOrder.OrderPhoneNumber = TestData;
             Assert.AreEqual(anOrder.OrderPhoneNumber, TestData);
         }
 
@@ -151,7 +151,7 @@ namespace Games_Testing
             Boolean OK = true;
             Int32 OrderNo = 2;
             Found = anOrder.Find(OrderNo);
-            if(anOrder.OrderDateAdded != Convert.ToDateTime("16/09/2015"))
+            if (anOrder.OrderDateAdded != Convert.ToDateTime("16/09/2015"))
             {
                 OK = false;
             }
@@ -175,6 +175,20 @@ namespace Games_Testing
             Assert.IsTrue(OK);
         }
 
+        [TestMethod]
+        public void TestOrderActiveFound()
+        {
+            clsOrder anOrder = new clsOrder();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderNo = 2;
+            Found = anOrder.Find(OrderNo);
+            if (anOrder.OrderActive != true)
+            {
+                OK = false;
+            }
 
+            Assert.IsTrue(OK);
+        }
     }
 }
