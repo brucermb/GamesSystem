@@ -1,13 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29728.190
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1145
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesBackOffice", "GamesBackOffice\GamesBackOffice\GamesBackOffice.csproj", "{BAF37E59-616A-4310-B5FE-1DB9CF9EAFC8}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GamesFrontOffice", "GamesFrontOffice\GamesFrontOffice\", "{B9EE074B-C872-4BCC-BE73-EABA865B73A0}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{de032670-2834-45cb-8631-1633007bb889}|GamesClasses.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_51388"
 		Debug.AspNetCompiler.PhysicalPath = "GamesFrontOffice\GamesFrontOffice\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51388\"
