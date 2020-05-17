@@ -10,43 +10,43 @@ namespace GamesClasses
         //private member var
         private Int32 mProduct_ID { get; set; }
         //public member var
-        public Int32 Product_ID { get { return mProduct_ID; } set { mProduct_ID = value; } }
+        public Int32 Product_ID { get => mProduct_ID; set => mProduct_ID = value; }
 
         //title
         //private
         private string mTitle { get; set; }
         //public
-        public string Title { get { return mTitle; } set { mTitle = value; } }
+        public string Title { get => mTitle; set => mTitle = value; }
 
         //Description
         //private
         private string mDescription { get; set; }
         //public
-        public string Description { get { return mDescription; } set { mDescription = value; } }
+        public string Description { get => mDescription; set => mDescription = value; }
 
         //out of stock
         //private
         private string mOut_Of_Stock { get; set; }
         //public
-        public string Out_Of_Stock { get { return mOut_Of_Stock; } set { mOut_Of_Stock = value; } }
+        public string Out_Of_Stock { get => mOut_Of_Stock; set => mOut_Of_Stock = value; }
 
         //Unit_Price
         //private
         private double mUnit_Price { get; set; }
         //public
-        public double Unit_Price { get { return mUnit_Price; } set { mUnit_Price = value; } }
+        public double Unit_Price { get => mUnit_Price; set => mUnit_Price = value; }
 
         //Platform
         //private
         private string mPlatform { get; set; }
         //public
-        public string Platform { get { return mPlatform; } set { mPlatform = value; } }
+        public string Platform { get => mPlatform; set => mPlatform = value; }
 
         //Genre
         //private
         public string mGenre { get; set; }
         //public
-        public string Genre { get { return mGenre; } set { mGenre = value; } }
+        public string Genre { get => mGenre; set => mGenre = value; }
 
         //release date
         //private
@@ -54,8 +54,8 @@ namespace GamesClasses
         //public
         public DateTime Release_Date
         {
-            get { return mRelease_Date; }
-            set { mRelease_Date = value; }
+            get => mRelease_Date;
+            set => mRelease_Date = value;
         }
 
 

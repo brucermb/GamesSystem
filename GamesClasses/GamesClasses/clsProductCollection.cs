@@ -14,16 +14,12 @@ namespace GamesClasses
 
         public clsProduct ThisProduct
         {
-            get
-            {
+            get =>
                 //return the private data
-                return mThisProduct;
-            }
-            set
-            {
+                mThisProduct;
+            set =>
                 //set the private data
                 mThisProduct = value;
-            }
         }
 
         //constructor for the class
@@ -63,20 +59,14 @@ namespace GamesClasses
         }
 
         public List<clsProduct> ProductList {
-            get
-            {
-                return mProductList;
-            }
-            set
-            {
-                mProductList = value;
-            }
+            get => mProductList;
+            set => mProductList = value;
         }
 
 
         public int Count
         {
-            get { return mProductList.Count; }
+            get => mProductList.Count;
             set
             {
                 //worrying about this later? }

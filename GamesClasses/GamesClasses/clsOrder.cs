@@ -18,121 +18,55 @@ namespace GamesClasses
 
         public Boolean OrderActive
         {
-            get
-            {
-                return mOrderActive;
-            }
-            set
-            {
-                mOrderActive = value;
-            }
+            get => mOrderActive;
+            set => mOrderActive = value;
         }
-        public DateTime OrderDateAdded 
-        {   get
-            {
-                return mOrderDateAdded;
-            }
-            set
-            {
-                mOrderDateAdded = value;
-            }
+        public DateTime OrderDateAdded
+        { get => mOrderDateAdded;
+            set => mOrderDateAdded = value;
         }
-        public int OrderNo 
+        public int OrderNo
         {
-            get
-            {
-                return mOrderNo;
-            }
-          set
-            {
-                mOrderNo = value;
-            }
+            get => mOrderNo;
+          set => mOrderNo = value;
         }
-        public decimal OrderTotal 
-        { get
-            {
-                return mOrderTotal;
-            }
-          set
-            {
-                mOrderTotal = value;
-            }
+        public decimal OrderTotal
+        { get => mOrderTotal;
+          set => mOrderTotal = value;
         }
-        public string OrderFirstName 
-        { get
-            {
-                return mOrderFirstName;
-            }
-          set
-            {
-                mOrderFirstName = value;
-            } 
+        public string OrderFirstName
+        { get => mOrderFirstName;
+          set => mOrderFirstName = value;
         }
         public string OrderLastName
         {
-            get
-            {
-                return mOrderLastName;
-            }
-            set
-            {
-                mOrderLastName = value;
-            }
+            get => mOrderLastName;
+            set => mOrderLastName = value;
         }
         public string OrderAddress
         {
-            get
-            {
-                return mOrderAddress;
-            }
-            set
-            {
-                mOrderAddress = value;
-            }
+            get => mOrderAddress;
+            set => mOrderAddress = value;
         }
         public string OrderPostcode
         {
-            get
-            {
-                return mOrderPostcode;
-            }
-            set
-            {
-                mOrderPostcode = value;
-            }
+            get => mOrderPostcode;
+            set => mOrderPostcode = value;
         }
         public string OrderCity
         {
-            get
-            {
-                return mOrderCity;
-            }
-            set
-            {
-                mOrderCity= value;
-            }
+            get => mOrderCity;
+            set => mOrderCity = value;
         }
         public string OrderPhoneNumber
         {
-            get
-            {
-                return mOrderPhoneNumber;
-            }
-            set
-            {
-                mOrderPhoneNumber = value;
-            }
+            get => mOrderPhoneNumber;
+            set => mOrderPhoneNumber = value;
         }
         public string OrderEmail
         {
-            get
-            {
-                return mOrderEmail;
-            }
-            set
-            {
-                mOrderEmail = value;
-            }
+            get => mOrderEmail;
+            set => mOrderEmail = value;
         }
 
         public bool Find(int OrderNo)

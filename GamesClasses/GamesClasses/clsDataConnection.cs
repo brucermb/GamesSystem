@@ -202,16 +202,12 @@ public class clsDataConnection
     public DataTable DataTable
     //public property that provides access to the query results
     {
-        get
-        {
+        get =>
             //return the query results
-            return dataTable;
-        }
-        set
-        {
+            dataTable;
+        set =>
             //set the query results
             dataTable = value;
-        }
     }
 }
 
