@@ -2,7 +2,7 @@
 
 namespace GamesClasses
 {
-    private Boolean mCustomerActive;
+     private Boolean mCustomerActive;
     private Int1 mCustomerNo;
     private DateTime mCustomerDateAdded;
     private decimal mCustomerTotal;
