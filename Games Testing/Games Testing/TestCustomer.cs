@@ -19,13 +19,13 @@ namespace Games_Testing
         [TestMethod]
         public void ActiveCustomerOK()
         {
-            //create an instance of the class we want to create
+            // Instance of the class we want to create
             clsCustomer anCustomer = new clsCustomer();
-            //create some test data to assign to the property
+            //Some test data to assign to the property
             Boolean testData = true;
-            //assign the data to the property
+            //Assign data 
             anCustomer.CustomerActive = testData;
-            //test to see that the two values are the same;
+            //test  the two values are the same;
             Assert.AreEqual(anCustomer.CustomerActive, testData);
         }
 
