@@ -3,7 +3,9 @@
 namespace GamesClasses
 {
     public class clsCustomer
-    {   
+    {
+        
+            {
         private Boolean mCustomerActive;
         private Int1 mCustomerNo;
         private DateTime mCustomerDateAdded;
@@ -18,61 +20,127 @@ namespace GamesClasses
 
         public int CustomerNo
         {
-            get => mCustomerNo;
+            get
+            {
+                return mCustomerNo;
+            }
 
-            set => mCustomerNo = value;
+            set
+            {
+                mCustomerNo = value;
+            }
         }
 
         public Boolean CustomerActive
         {
-            get => mCustomerActive;
-            set => mCustomerActive = value;
+            get
+            {
+                return mCustomerActive;
+            }
+            set
+            {
+                mCustomerActive = value;
+            }
         }
         public System.DateTime CustomerDateAdded
         {
-            get => mCustomerDateAdded;
-            set => mCustomerDateAdded = value;
+            get
+            {
+                return mCustomerDateAdded;
+            }
+            set
+            {
+                mCustomerDateAdded = value;
+            }
         }
-
+        
         public decimal CustomerTotal
         {
-            get => mCustomerTotal;
-            set => mCustomerTotal = value;
+            get
+            {
+                return mCustomerTotal;
+            }
+            set
+            {
+                mCustomerTotal = value;
+            }
         }
         public string CustomerFirstName
         {
-            get => mCustomerFirstName;
-            set => mCustomerFirstName = value;
+            get
+            {
+                return mCustomerFirstName;
+            }
+            set
+            {
+                mCustomerFirstName = value;
+            }
         }
         public string CustomerLastName
         {
-            get => mCustomerLastName;
-            set => mCustomerLastName = value;
+            get
+            {
+                return mCustomerLastName;
+            }
+            set
+            {
+                mCustomerLastName = value;
+            }
         }
         public string CustomerAddress
         {
-            get => mCustomerAddress;
-            set => mCustomerAddress = value;
+            get
+            {
+                return mCustomerAddress;
+            }
+            set
+            {
+                mCustomerAddress = value;
+            }
         }
         public string CustomerPostcode
         {
-            get => mCustomerPostcode;
-            set => mCustomerPostcode = value;
+            get
+            {
+                return mCustomerPostcode;
+            }
+            set
+            {
+                mCustomerPostcode = value;
+            }
         }
         public string CustomerCity
         {
-            get => mCustomerCity;
-            set => mCustomerCity = value;
+            get
+            {
+                return mCustomerCity;
+            }
+            set
+            {
+                mCustomerCity = value;
+            }
         }
         public string CustomerPhoneNumber
         {
-            get => mCustomerPhoneNumber;
-            set => mCustomerPhoneNumber = value;
+            get
+            {
+                return mCustomerPhoneNumber;
+            }
+            set
+            {
+                mCustomerPhoneNumber = value;
+            }
         }
         public string CustomerEmail
         {
-            get => mCustomerEmail;
-            set => mCustomerEmail = value;
+            get
+            {
+                return mCustomerEmail;
+            }
+            set
+            {
+                mCustomerEmail = value;
+            }
         }
 
         public object Convert { get; private set; }
@@ -90,9 +158,8 @@ namespace GamesClasses
             if (DB.Count == 1)
             {
                 mCustomerActive = Convert.ToBoolean(DB.DataTable.Rows[0]["CustomerActive"]);
-                mCustomerLastName = Convert.ToString(DB.DataTable.Rows[0]["CustomerLastName"]);
                 mCustomerFirstName = Convert.ToString(DB.DataTable.Rows[0]["CustomerFirstName"]);
-                
+                mCustomerLastName = Convert.ToString(DB.DataTable.Rows[0]["CustomerLastName"]);
                 mCustomerAddress = Convert.ToString(DB.DataTable.Rows[0]["CustomerAddress"]);
                 mCustomerPostcode = Convert.ToString(DB.DataTable.Rows[0]["CustomerPostcode"]);
                 mCustomerCity = Convert.ToString(DB.DataTable.Rows[0]["CustomerCity"]);
@@ -128,9 +195,5 @@ namespace GamesClasses
 
     public class Int1
     {
-        public static implicit operator Int1(int v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
