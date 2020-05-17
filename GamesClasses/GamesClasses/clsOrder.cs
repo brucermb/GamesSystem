@@ -204,12 +204,79 @@ namespace GamesClasses
                 Error = Error + "The less must be less than 25 characters: ";
             }
             //copy the dateAdded value to the DateTemp variable
-            DateTemp = Convert.ToDateTime(OrderDateAdded);
-            if (DateTemp < DateTime.Now.Date)
+            try
+            {
+                DateTemp = Convert.ToDateTime(OrderDateAdded);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the past: ";
+                }
+                //check to see if the date is greater than today's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date was not a valid date : ";
+                }
+            }
+            catch
+            {
+                //record the error 
+                Error = Error + "The date cannot be in the future: ";
+            }
+            //is the post code blank
+            if (OrderPostcode.Length == 0)
             {
                 //record the error
-                Error = Error + "The date cannot be in the past: ";
+                Error = Error + "The post code may not be blank : ";
             }
+            //if the post code is too long
+            if (OrderPostcode.Length > 9)
+            {
+                //record the error
+                Error = Error + "The post code must be less than 9 characters : ";
+            }
+            //is the street blank
+            if (OrderAddress.Length == 0)
+            {
+                //record the error
+                Error = Error + "The street may not be blank : ";
+            }
+            //if the street is too long
+            if (OrderAddress.Length > 50)
+            {
+                //record the error
+                Error = Error + "The street must be less than 50 characters : ";
+            }
+            //is the town blank
+            if (OrderCity.Length == 0)
+            {
+                //record the error
+                Error = Error + "The town may not be blank : ";
+            }
+            //if the town is too long
+            if (OrderCity.Length > 50)
+            {
+                //record the error
+                Error = Error + "The town must be less than 50 characters : ";
+            }
+            if (OrderEmail.Length == 0)
+            {
+                Error = Error + "Email may not be blank : ";
+            }
+            if (OrderEmail.Length > 50)
+            {
+                Error = Error + "Email must be less than 50 characters : ";
+            }
+            if (OrderPhoneNumber.Length == 0)
+            {
+                Error = Error + "Phone Number may not be blank : ";
+            }
+            if (OrderPhoneNumber.Length > 25)
+            {
+                Error = Error + "Phone Number must be less than 25 characters : ";
+            }
+
             //return any error messages
             return Error;
         }

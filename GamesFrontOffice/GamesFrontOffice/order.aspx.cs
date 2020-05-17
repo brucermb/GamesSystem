@@ -51,28 +51,33 @@ public partial class Default2 : System.Web.UI.Page
     protected void btnOK_Click(object sender, EventArgs e)
     {
         clsOrder anOrder = new clsOrder();
-        //capture the order no
-        anOrder.OrderNo = Convert.ToInt32(txtOrderNo.Text);
-        //capture the email
-        anOrder.OrderEmail = txtEmail.Text;
-        //capture the first name
-        anOrder.OrderFirstName = txtOrderNo.Text;
-        //capture the last name
-        anOrder.OrderLastName = txtLastName.Text;
-        //caputre address
-        anOrder.OrderAddress = txtAddress.Text;
-        //capture City
-        anOrder.OrderCity = txtCity.Text;
-        //capture post code
-        anOrder.OrderPostcode = txtPostcode.Text;
-        //capture Phone Number
-        anOrder.OrderPhoneNumber = txtPhoneNumber.Text;
-        //capture date added
-        anOrder.OrderDateAdded = Convert.ToDateTime(txtDateAdded.Text);
-        //store the order no in the session object
-        Session["anOrder"] = anOrder;
-        //redirect to the viewer page
-        Response.Redirect("OrderViewer.aspx");
-
+        string OrderNo = txtOrderNo.Text;
+        string OrderFirstName = txtFirstName.Text;
+        string OrderLastName = txtLastName.Text;
+        string OrderAddress = txtAddress.Text;
+        string OrderCity = txtCity.Text;
+        string OrderPhoneNumber = txtPhoneNumber.Text;
+        string OrderEmail = txtEmail.Text;
+        string OrderPostcode = txtPostcode.Text;
+        string OrderDateAdded = txtDateAdded.Text;
+        //variable to store any errors
+        string Error = "";
+        //validate the data
+        Error = anOrder.Valid(OrderNo, OrderFirstName, OrderLastName, OrderAddress, OrderPostcode, OrderCity, OrderPhoneNumber, OrderEmail, OrderDateAdded);
+        if (Error == "")
+        {
+            anOrder.OrderNo = Convert.ToInt32(OrderNo);
+            anOrder.OrderCity = OrderCity;
+            anOrder.OrderAddress = OrderAddress;
+            anOrder.OrderPostcode = OrderPostcode;
+            anOrder.OrderDateAdded = Convert.ToDateTime(OrderDateAdded);
+            Session["anOrder"] = anOrder;
+            Response.Write("orderViewer.aspx");
+        }
+        else
+        {
+            //display the error message
+            lblError.Text = Error;
+        }
     }
 }
