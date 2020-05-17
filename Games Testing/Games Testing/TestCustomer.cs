@@ -190,7 +190,52 @@ namespace Games_Testing
                 OK = false;
             }
 
-            Assert.IsTrue(OK);
+             [TestMethod]
+        public void UsernamePropertyOk()
+        {
+            // create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            // create some test data to assign to the property
+            string TestData = "GavinoFree";
+            // assign the data to the property
+            ACustomer.Username = TestData;
+            // test to see if the two values are the same
+            Assert.AreEqual(ACustomer.Username, TestData);
         }
+
+        [TestMethod]
+        public void CustomerAdminPermissionPropertyOk()
+        {
+            // create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            // create some test data to assign to the property
+            Boolean TestData = true;
+            // assign the data to the property
+            ACustomer.CustomerAdmin = TestData;
+            // test to see if the two values are the same
+            Assert.AreEqual(ACustomer.CustomerAdmin, TestData);
+
+
+
+        [TestMethod]
+        public void PasswordPropertyOk()
+        {
+            // create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            // create some test data to assign to the property
+            string TestData = "password";
+            // assign the data to the property
+            ACustomer.Password = TestData;
+            // test to see if the two values are the same
+            Assert.AreEqual(ACustomer.Password, TestData);
+        }
+        
+        }
+
+
     }
-}   
+Assert.IsTrue(OK);
+                }
+           }
+    }
+   
