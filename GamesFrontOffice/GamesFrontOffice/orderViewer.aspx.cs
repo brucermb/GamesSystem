@@ -10,8 +10,11 @@ public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        //create a new instance of clsOrder
         clsOrder anOrder = new clsOrder();
-        anOrder = (clsOrder)Session["AnOrder"];
+        //get the date from the session object
+        anOrder = (clsOrder)Session["anOrder"];
+        //display the order number for this entry
         Response.Write(anOrder.OrderNo);
     }
 }

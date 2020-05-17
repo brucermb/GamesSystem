@@ -8,13 +8,14 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="height: 587px">
+            <asp:TextBox ID="txtFirstName" runat="server" style="z-index: 1; left: 478px; top: 199px; position: absolute"></asp:TextBox>
         </div>
-        <asp:TextBox ID="txtFirstName" runat="server" style="z-index: 1; left: 479px; top: 203px; position: absolute"></asp:TextBox>
+        <asp:TextBox ID="txtOrderNo" runat="server" style="z-index: 1; left: 413px; top: 121px; position: absolute; width: 86px;"></asp:TextBox>
         <asp:Label ID="lblFirstName" runat="server" style="z-index: 1; left: 385px; top: 201px; position: absolute; height: 25px" Text="First Name"></asp:Label>
         <asp:Label ID="lblLastName" runat="server" style="z-index: 1; left: 385px; top: 240px; position: absolute" Text="Last Name"></asp:Label>
         <asp:TextBox ID="txtLastName" runat="server" style="z-index: 1; left: 478px; top: 242px; position: absolute"></asp:TextBox>
-        <asp:Label ID="lblOrderNo" runat="server" style="z-index: 1; left: 348px; top: 120px; position: absolute" Text="OrderNo"></asp:Label>
+        <asp:Label ID="lblOrderNo" runat="server" style="z-index: 1; left: 354px; top: 108px; position: absolute; width: 57px;" Text="Order Number"></asp:Label>
         <asp:Label ID="lblAddress" runat="server" style="z-index: 1; left: 384px; top: 280px; position: absolute" Text="Address"></asp:Label>
         <p>
             &nbsp;</p>
@@ -22,7 +23,6 @@
             <asp:Label ID="lblPostcode" runat="server" style="z-index: 1; left: 386px; top: 355px; position: absolute" Text="Post Code"></asp:Label>
             <asp:Button ID="btnFind" runat="server" OnClick="btnFind_Click" style="z-index: 1; left: 522px; top: 115px; position: absolute" Text="Find" />
         </p>
-        <asp:TextBox ID="txtOrderNo" runat="server" style="z-index: 1; left: 430px; top: 118px; position: absolute; width: 64px"></asp:TextBox>
         <p>
             <asp:Label ID="lblEmail" runat="server" style="z-index: 1; left: 388px; top: 163px; position: absolute; bottom: 495px" Text="Email"></asp:Label>
             <asp:TextBox ID="txtEmail" runat="server" style="z-index: 1; left: 480px; top: 162px; position: absolute"></asp:TextBox>

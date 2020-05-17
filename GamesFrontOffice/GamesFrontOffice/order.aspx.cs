@@ -11,12 +11,14 @@ public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //create a new instance of clsOrder
+        //create a new instance of clsOrder 
         clsOrder anOrder = new clsOrder();
-        //get the date from the session object
-        anOrder = (clsOrder)Session["anOrder"];
-        //display the order number for this entry
-        Response.Write(anOrder.OrderNo);
+        //capture the order no 
+        anOrder.OrderNo = Convert.ToInt32(txtOrderNo.Text);
+        //store the order in the session object
+        Session["anOrder"] = anOrder;
+        //redirect to the viewer page
+        Response.Redirect("orderViewer.aspx");
     }
 
     protected void btnFind_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ public partial class Default2 : System.Web.UI.Page
         if (Found == true)
         {
             txtEmail.Text = anOrder.OrderEmail;
-            txtFirstName.Text = anOrder.OrderFirstName;
+            txtOrderNo.Text = anOrder.OrderFirstName;
             txtLastName.Text = anOrder.OrderLastName;
             txtAddress.Text = anOrder.OrderAddress;
             txtCity.Text = anOrder.OrderCity;
@@ -54,7 +56,7 @@ public partial class Default2 : System.Web.UI.Page
         //capture the email
         anOrder.OrderEmail = txtEmail.Text;
         //capture the first name
-        anOrder.OrderFirstName = txtFirstName.Text;
+        anOrder.OrderFirstName = txtOrderNo.Text;
         //capture the last name
         anOrder.OrderLastName = txtLastName.Text;
         //caputre address
