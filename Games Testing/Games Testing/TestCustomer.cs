@@ -26,7 +26,7 @@ namespace Games_Testing
             //assign the data to the property
             anCustomer.CustomerActive = testData;
             //test to see that the two values are the same;
-            Assert.AreEqual(anCustomer.OrderCustomer, testData);
+            Assert.AreEqual(anCustomer.CustomerActive, testData);
         }
 
         [TestMethod]
@@ -138,7 +138,7 @@ namespace Games_Testing
             Boolean OK = true;
             Int32 CustomerNo = 1;
             Found = anCustomer.Find(CustomerNo);
-            if (anCustomer.CustomerNo != 2)
+            if (anCustomer.CustomerNo != 1)
             {
                 OK = false;
             }
@@ -151,7 +151,7 @@ namespace Games_Testing
             clsCustomer anCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 CustomerNo = 2;
+            Int32 CustomerNo = 1;
             Found = anCustomer.Find(CustomerNo);
             if (anCustomer.CustomerDateAdded != Convert.ToDateTime("1/10/2018"))
             {
@@ -167,7 +167,7 @@ namespace Games_Testing
             clsCustomer anCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 CustomerNo = 2;
+            Int32 CustomerNo = 1;
             Found = anCustomer.Find(CustomerNo);
             if (anCustomer.CustomerTotal != Convert.ToDecimal(20M))
             {
@@ -183,7 +183,7 @@ namespace Games_Testing
             clsCustomer anCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 CustomerNo = 2;
+            Int32 CustomerNo = 1;
             Found = anCustomer.Find(CustomerNo);
             if (anCustomer.CustomerActive != true)
             {
