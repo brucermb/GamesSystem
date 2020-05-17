@@ -90,8 +90,9 @@ namespace GamesClasses
             if (DB.Count == 1)
             {
                 mCustomerActive = Convert.ToBoolean(DB.DataTable.Rows[0]["CustomerActive"]);
-                mCustomerFirstName = Convert.ToString(DB.DataTable.Rows[0]["CustomerFirstName"]);
                 mCustomerLastName = Convert.ToString(DB.DataTable.Rows[0]["CustomerLastName"]);
+                mCustomerFirstName = Convert.ToString(DB.DataTable.Rows[0]["CustomerFirstName"]);
+                
                 mCustomerAddress = Convert.ToString(DB.DataTable.Rows[0]["CustomerAddress"]);
                 mCustomerPostcode = Convert.ToString(DB.DataTable.Rows[0]["CustomerPostcode"]);
                 mCustomerCity = Convert.ToString(DB.DataTable.Rows[0]["CustomerCity"]);
