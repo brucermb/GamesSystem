@@ -8,7 +8,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GamesFrontOffice", "GamesFrontOffice\GamesFrontOffice\", "{B9EE074B-C872-4BCC-BE73-EABA865B73A0}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		ProjectReferences = "{de032670-2834-45cb-8631-1633007bb889}|GamesClasses.dll;"
+		ProjectReferences = "{de032670-2834-45cb-8631-1633007bb889}|GamesClasses.dll;{fb01512d-d819-4f07-8b77-b1f4d22b26cb}|Games Testing.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_51388"
 		Debug.AspNetCompiler.PhysicalPath = "GamesFrontOffice\GamesFrontOffice\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51388\"
