@@ -368,7 +368,8 @@ namespace Games_Testing
             FilteredCustomerAddresses.ReportByPostCose("");
             //test to see that the two values are the same
             Assert.AreEqual(AllCustomerAddress.count, FilteredCustomerAddresses.count);
-        } }
+        }
+    }
 
         }
           
