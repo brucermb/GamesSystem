@@ -8,6 +8,8 @@ namespace Games_Testing
     [TestClass]
     public class TestCustomer
     {
+        public object CustomerAddress { get; private set; }
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -328,7 +330,7 @@ namespace Games_Testing
         public void DeleteMethodOK()
         {
             //create an instance of the class we want to create
-            clsCustomerAddressCollection AllCustomerAddress = new clsCustomerAddressCollection();
+            clsCustomerAddress AllCustomerAddress = new clsCustomerAddressCollection();
             //create the item of test data
             clsCustomerAddress TestItem = new clsCustomerAddress();
             //var to store the primary key

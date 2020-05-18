@@ -139,7 +139,7 @@ public class clsDataConnection
         return OldPath;
     }
 
-    public void AddParameter(string ParamName, object ParamValue)
+    public void AddParameter(string ParamName, int customerAddress, object ParamValue)
     ///public method allowing the addition of an sql parameter to the list of parameters
     ///it accepts two parameters the name of the parameter and its value
     {
@@ -187,6 +187,11 @@ public class clsDataConnection
         connectionToDB.Close();
         //return the result of the stored procedure
         return Convert.ToInt32(returnValue.Value);
+    }
+
+    internal void AddParameter(string v, int customerNo)
+    {
+        throw new NotImplementedException();
     }
 
     public Int32 Count
